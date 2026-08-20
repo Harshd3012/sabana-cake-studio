@@ -1,0 +1,944 @@
+/* ================= GENERAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    background: #fffaf7;
+
+    color: #3b2925;
+
+}
+
+
+
+/* ================= HEADER ================= */
+
+.header {
+
+    height: 80px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background: white;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    box-shadow:
+        0 2px 15px
+        rgba(0, 0, 0, 0.04);
+
+}
+
+
+.logo {
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    color: #6d3f32;
+
+}
+
+
+nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+}
+
+
+nav a {
+
+    text-decoration: none;
+
+    color: #3b2925;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+
+}
+
+
+nav a:hover {
+
+    color: #a46b58;
+
+}
+
+
+.admin-link {
+
+    background: #f8e9e1;
+
+    padding: 9px 15px;
+
+    border-radius: 20px;
+
+}
+
+
+
+/* ================= HERO ================= */
+
+.hero {
+
+    min-height: 650px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 80px 8%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #fff3ec,
+            #fffaf7
+        );
+
+}
+
+
+.hero-content {
+
+    max-width: 650px;
+
+}
+
+
+.small-title {
+
+    text-transform: uppercase;
+
+    letter-spacing: 3px;
+
+    font-size: 14px;
+
+    color: #a46b58;
+
+    margin-bottom: 20px;
+
+}
+
+
+.hero h1 {
+
+    font-size: 64px;
+
+    line-height: 1.08;
+
+    margin-bottom: 25px;
+
+}
+
+
+.hero p:not(.small-title) {
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    color: #665650;
+
+    margin-bottom: 35px;
+
+}
+
+
+.hero-button {
+
+    display: inline-block;
+
+    padding: 15px 28px;
+
+    background: #6d3f32;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    transition: 0.3s;
+
+}
+
+
+.hero-button:hover {
+
+    background: #4d2c23;
+
+    transform: translateY(-2px);
+
+}
+
+
+
+/* ================= CAKES ================= */
+
+.cakes-section {
+
+    padding: 100px 7%;
+
+}
+
+
+.section-heading {
+
+    text-align: center;
+
+    margin-bottom: 40px;
+
+}
+
+
+.section-heading p {
+
+    letter-spacing: 3px;
+
+    font-size: 13px;
+
+    color: #a46b58;
+
+}
+
+
+.section-heading h2 {
+
+    font-size: 45px;
+
+    margin: 12px 0;
+
+}
+
+
+.section-heading span {
+
+    color: #806e68;
+
+    font-size: 16px;
+
+}
+
+
+
+/* ================= SEARCH ================= */
+
+.listing-tools {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.search-box {
+
+    width: 100%;
+
+    max-width: 500px;
+
+    position: relative;
+
+}
+
+
+.search-icon {
+
+    position: absolute;
+
+    left: 17px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+}
+
+
+.search-box input {
+
+    width: 100%;
+
+    height: 48px;
+
+    padding: 0 20px 0 45px;
+
+    border: 1px solid #e5d2c9;
+
+    border-radius: 25px;
+
+    background: white;
+
+    outline: none;
+
+    color: #3b2925;
+
+    font-size: 14px;
+
+}
+
+
+.search-box input:focus {
+
+    border-color: #a46b58;
+
+}
+
+
+
+/* ================= SORT ================= */
+
+.sort-box {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    white-space: nowrap;
+
+}
+
+
+.sort-box label {
+
+    color: #756660;
+
+    font-size: 14px;
+
+}
+
+
+.sort-box select {
+
+    height: 48px;
+
+    padding: 0 30px 0 15px;
+
+    border: 1px solid #e5d2c9;
+
+    border-radius: 25px;
+
+    background: white;
+
+    color: #6d3f32;
+
+    outline: none;
+
+    cursor: pointer;
+
+}
+
+
+
+/* ================= FILTERS ================= */
+
+.cake-filters {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.filter-btn {
+
+    border: 1px solid #e5d2c9;
+
+    background: white;
+
+    color: #6d3f32;
+
+    padding: 11px 20px;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+
+}
+
+
+.filter-btn:hover {
+
+    background: #f8e9e1;
+
+}
+
+
+.filter-btn.active {
+
+    background: #6d3f32;
+
+    color: white;
+
+    border-color: #6d3f32;
+
+}
+
+
+
+/* ================= COUNT ================= */
+
+.listing-info {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    margin-bottom: 25px;
+
+    color: #806e68;
+
+    font-size: 14px;
+
+}
+
+
+
+/* ================= GRID ================= */
+
+.cake-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 30px;
+
+}
+
+
+
+/* ================= CARD ================= */
+
+.cake-card {
+
+    background: white;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0, 0, 0, 0.07);
+
+    transition: 0.3s;
+
+}
+
+
+.cake-card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 18px 40px
+        rgba(0, 0, 0, 0.12);
+
+}
+
+
+
+/* ================= IMAGE ================= */
+
+.cake-image {
+
+    height: 300px;
+
+    overflow: hidden;
+
+    background: #f3ddd3;
+
+}
+
+
+.cake-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: 0.4s;
+
+}
+
+
+.cake-card:hover
+.cake-image img {
+
+    transform: scale(1.04);
+
+}
+
+
+
+/* ================= INFO ================= */
+
+.cake-info {
+
+    padding: 25px;
+
+}
+
+
+.cake-style {
+
+    font-size: 12px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    color: #a46b58;
+
+}
+
+
+.cake-info h3 {
+
+    font-size: 24px;
+
+    margin: 12px 0;
+
+}
+
+
+.cake-info p {
+
+    color: #756660;
+
+    line-height: 1.6;
+
+    font-size: 15px;
+
+}
+
+
+
+/* ================= DETAILS ================= */
+
+.cake-details {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 18px;
+
+}
+
+
+.cake-details span {
+
+    font-size: 13px;
+
+    background: #f8eee9;
+
+    padding: 7px 10px;
+
+    border-radius: 20px;
+
+    color: #6d3f32;
+
+}
+
+
+
+/* ================= BOTTOM ================= */
+
+.cake-bottom {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 25px;
+
+}
+
+
+.cake-bottom strong {
+
+    font-size: 22px;
+
+    color: #3b2925;
+
+    white-space: nowrap;
+
+}
+
+
+.cake-bottom button {
+
+    border: none;
+
+    background: #6d3f32;
+
+    color: white;
+
+    padding: 10px 15px;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+
+}
+
+
+.cake-bottom button:hover {
+
+    background: #4d2c23;
+
+}
+
+
+
+/* ================= NO RESULTS ================= */
+
+.no-results {
+
+    display: none;
+
+    text-align: center;
+
+    padding: 70px 20px;
+
+}
+
+
+.no-results-icon {
+
+    font-size: 50px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.no-results h3 {
+
+    font-size: 25px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.no-results p {
+
+    color: #756660;
+
+}
+
+
+
+/* ================= ABOUT ================= */
+
+.about {
+
+    padding: 100px 10%;
+
+    text-align: center;
+
+    background: #f8e9e1;
+
+}
+
+
+.about-label {
+
+    text-transform: uppercase;
+
+    letter-spacing: 3px;
+
+    font-size: 13px;
+
+    color: #a46b58;
+
+}
+
+
+.about h2 {
+
+    font-size: 45px;
+
+    margin: 15px 0;
+
+}
+
+
+.about p:last-child {
+
+    max-width: 600px;
+
+    margin: auto;
+
+    line-height: 1.7;
+
+    color: #665650;
+
+}
+
+
+
+/* ================= CONTACT ================= */
+
+.contact {
+
+    text-align: center;
+
+    padding: 100px 20px;
+
+}
+
+
+.contact h2 {
+
+    font-size: 40px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.contact p {
+
+    color: #756660;
+
+    margin-bottom: 30px;
+
+}
+
+
+.contact button {
+
+    border: none;
+
+    background: #6d3f32;
+
+    color: white;
+
+    padding: 15px 30px;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+}
+
+
+
+/* ================= FOOTER ================= */
+
+footer {
+
+    text-align: center;
+
+    padding: 30px;
+
+    background: #3b2925;
+
+    color: white;
+
+    font-size: 14px;
+
+}
+
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 800px) {
+
+    .header {
+
+        padding: 0 5%;
+
+    }
+
+
+    .logo {
+
+        font-size: 20px;
+
+    }
+
+
+    nav {
+
+        display: none;
+
+    }
+
+
+    .hero {
+
+        min-height: 550px;
+
+        padding: 60px 7%;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 42px;
+
+    }
+
+
+    .cakes-section {
+
+        padding: 70px 5%;
+
+    }
+
+
+    .section-heading h2 {
+
+        font-size: 35px;
+
+    }
+
+
+    .listing-tools {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+
+    .search-box {
+
+        max-width: none;
+
+    }
+
+
+    .sort-box {
+
+        justify-content: space-between;
+
+    }
+
+
+    .cake-filters {
+
+        justify-content: flex-start;
+
+        overflow-x: auto;
+
+        flex-wrap: nowrap;
+
+        padding-bottom: 8px;
+
+    }
+
+
+    .filter-btn {
+
+        white-space: nowrap;
+
+    }
+
+
+    .listing-info {
+
+        justify-content: flex-start;
+
+    }
+
+
+    .cake-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .cake-bottom {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+
+    .cake-bottom button {
+
+        width: 100%;
+
+    }
+
+}

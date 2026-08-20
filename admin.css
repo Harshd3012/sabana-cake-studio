@@ -1,0 +1,679 @@
+/* ================= GENERAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    background: #fff8f4;
+
+    color: #3b2925;
+
+    min-height: 100vh;
+}
+
+
+
+/* ================= HEADER ================= */
+
+.admin-header {
+
+    background: white;
+
+    padding: 25px 7%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    border-bottom: 1px solid #eadbd4;
+}
+
+
+.admin-label {
+
+    color: #a46b58;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    font-weight: bold;
+}
+
+
+.admin-header h1 {
+
+    margin-top: 6px;
+
+    font-size: 25px;
+
+    color: #6d3f32;
+}
+
+
+.view-site {
+
+    text-decoration: none;
+
+    color: white;
+
+    background: #6d3f32;
+
+    padding: 12px 20px;
+
+    border-radius: 25px;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+
+.view-site:hover {
+
+    background: #4d2c23;
+
+}
+
+
+
+/* ================= CONTAINER ================= */
+
+.admin-container {
+
+    width: 92%;
+
+    max-width: 1100px;
+
+    margin: 45px auto;
+
+}
+
+
+
+/* ================= CARD ================= */
+
+.admin-card {
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 35px;
+
+    margin-bottom: 30px;
+
+    box-shadow:
+        0 10px 35px
+        rgba(0, 0, 0, 0.06);
+}
+
+
+.card-heading p,
+.manager-heading p {
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    color: #a46b58;
+
+    font-weight: bold;
+}
+
+
+.card-heading h2,
+.manager-heading h2 {
+
+    font-size: 30px;
+
+    margin-top: 8px;
+}
+
+
+
+/* ================= FORM ================= */
+
+#cakeForm {
+
+    margin-top: 30px;
+}
+
+
+.form-group {
+
+    margin-bottom: 24px;
+}
+
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 9px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    color: #4d3933;
+}
+
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+
+    width: 100%;
+
+    border: 1px solid #e1d0c8;
+
+    border-radius: 10px;
+
+    background: white;
+
+    padding: 13px 15px;
+
+    outline: none;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    color: #3b2925;
+
+    transition: 0.2s;
+}
+
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+
+    border-color: #a46b58;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(164, 107, 88, 0.1);
+}
+
+
+.form-group textarea {
+
+    resize: vertical;
+
+    line-height: 1.6;
+}
+
+
+.two-columns {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 20px;
+}
+
+
+
+/* ================= IMAGE UPLOAD ================= */
+
+.image-upload {
+
+    height: 280px;
+
+    border: 2px dashed #dfc8bd;
+
+    border-radius: 15px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #fffaf7;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.image-upload:hover {
+
+    border-color: #a46b58;
+
+    background: #fff6f1;
+}
+
+
+.image-upload input {
+
+    position: absolute;
+
+    inset: 0;
+
+    opacity: 0;
+
+    cursor: pointer;
+
+    z-index: 5;
+}
+
+
+.upload-content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #806e68;
+}
+
+
+.upload-icon {
+
+    font-size: 42px;
+
+    margin-bottom: 5px;
+}
+
+
+.upload-content strong {
+
+    color: #6d3f32;
+}
+
+
+.upload-content span {
+
+    font-size: 12px;
+}
+
+
+.image-preview {
+
+    display: none;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 2;
+}
+
+
+
+/* ================= PRICE ================= */
+
+.price-input {
+
+    display: flex;
+
+    align-items: center;
+
+    border: 1px solid #e1d0c8;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+
+.price-input span {
+
+    padding-left: 15px;
+
+    font-weight: bold;
+
+    color: #6d3f32;
+}
+
+
+.price-input input {
+
+    border: none !important;
+
+    box-shadow: none !important;
+
+}
+
+
+
+/* ================= ADD BUTTON ================= */
+
+.add-cake-btn {
+
+    width: 100%;
+
+    border: none;
+
+    background: #6d3f32;
+
+    color: white;
+
+    padding: 16px;
+
+    border-radius: 12px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.add-cake-btn:hover {
+
+    background: #4d2c23;
+
+    transform: translateY(-2px);
+}
+
+
+
+/* ================= MANAGER ================= */
+
+.manager-heading {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+
+.cake-count {
+
+    background: #f8e9e1;
+
+    color: #6d3f32;
+
+    padding: 9px 15px;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+.admin-cake-list {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+
+.admin-cake-item {
+
+    border: 1px solid #eadbd4;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    display: flex;
+
+    background: #fff;
+}
+
+
+.admin-cake-item img {
+
+    width: 130px;
+
+    height: 150px;
+
+    object-fit: cover;
+
+    flex-shrink: 0;
+}
+
+
+.admin-cake-content {
+
+    padding: 16px;
+
+    min-width: 0;
+}
+
+
+.admin-cake-content .category {
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    color: #a46b58;
+}
+
+
+.admin-cake-content h3 {
+
+    font-size: 17px;
+
+    margin: 7px 0;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+.admin-cake-content p {
+
+    font-size: 13px;
+
+    color: #806e68;
+
+    margin-bottom: 10px;
+}
+
+
+.admin-cake-price {
+
+    font-weight: bold;
+
+    color: #6d3f32;
+}
+
+
+.delete-btn {
+
+    border: none;
+
+    background: #f6e5df;
+
+    color: #8a4030;
+
+    padding: 7px 12px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    margin-top: 12px;
+
+    font-size: 12px;
+}
+
+
+.delete-btn:hover {
+
+    background: #efd2c8;
+}
+
+
+
+/* ================= EMPTY ================= */
+
+.empty-list {
+
+    text-align: center;
+
+    padding: 50px 20px;
+
+    color: #806e68;
+}
+
+
+.empty-list div {
+
+    font-size: 45px;
+
+    margin-bottom: 12px;
+}
+
+
+
+/* ================= TOAST ================= */
+
+.toast {
+
+    position: fixed;
+
+    right: 25px;
+
+    bottom: 25px;
+
+    background: #3b2925;
+
+    color: white;
+
+    padding: 14px 20px;
+
+    border-radius: 10px;
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+    pointer-events: none;
+
+    transition: 0.3s;
+
+    z-index: 1000;
+}
+
+
+.toast.show {
+
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 750px) {
+
+    .admin-header {
+
+        padding: 20px 5%;
+
+        gap: 15px;
+
+    }
+
+
+    .admin-header h1 {
+
+        font-size: 20px;
+
+    }
+
+
+    .view-site {
+
+        padding: 10px 13px;
+
+        font-size: 12px;
+
+    }
+
+
+    .admin-container {
+
+        width: 94%;
+
+        margin: 25px auto;
+
+    }
+
+
+    .admin-card {
+
+        padding: 22px;
+
+    }
+
+
+    .two-columns {
+
+        grid-template-columns: 1fr;
+
+        gap: 0;
+
+    }
+
+
+    .admin-cake-list {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .admin-cake-item img {
+
+        width: 110px;
+
+        height: 140px;
+
+    }
+
+}

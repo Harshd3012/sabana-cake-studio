@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Sabana Cake Studio | Cakes & Desserts</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="logo">
+            Sabana Cake Studio
+        </div>
+
+        <nav>
+
+            <a href="#home">Home</a>
+
+            <a href="#cakes">Cakes</a>
+
+            <a href="#about">About</a>
+
+            <a href="#contact">Contact</a>
+
+            <a
+                href="admin.html"
+                class="admin-link"
+            >
+                Admin
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ================= HERO ================= -->
+
+    <section
+        id="home"
+        class="hero"
+    >
+
+        <div class="hero-content">
+
+            <p class="small-title">
+                Freshly Baked With Love
+            </p>
+
+            <h1>
+                Cakes Made For
+                <br>
+                Your Special Moments
+            </h1>
+
+            <p>
+                Delicious handcrafted cakes made fresh
+                for birthdays, anniversaries, weddings
+                and every celebration.
+            </p>
+
+            <a
+                href="#cakes"
+                class="hero-button"
+            >
+                Explore Our Cakes
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= CAKES ================= -->
+
+    <section
+        id="cakes"
+        class="cakes-section"
+    >
+
+
+        <div class="section-heading">
+
+            <p>
+                OUR COLLECTION
+            </p>
+
+            <h2>
+                Delicious Cakes
+            </h2>
+
+            <span>
+                Made fresh for every celebration
+            </span>
+
+        </div>
+
+
+
+        <!-- ================= SEARCH + SORT ================= -->
+
+        <div class="listing-tools">
+
+
+            <div class="search-box">
+
+                <span class="search-icon">
+                    🔍
+                </span>
+
+                <input
+                    type="text"
+                    id="cakeSearch"
+                    placeholder="Search your favourite cake..."
+                >
+
+            </div>
+
+
+
+            <div class="sort-box">
+
+                <label for="cakeSort">
+                    Sort:
+                </label>
+
+                <select id="cakeSort">
+
+                    <option value="default">
+                        Default
+                    </option>
+
+                    <option value="low">
+                        Price: Low to High
+                    </option>
+
+                    <option value="high">
+                        Price: High to Low
+                    </option>
+
+                    <option value="az">
+                        Name: A to Z
+                    </option>
+
+                    <option value="za">
+                        Name: Z to A
+                    </option>
+
+                </select>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ================= FILTERS ================= -->
+
+        <div class="cake-filters">
+
+
+            <button
+                class="filter-btn active"
+                data-category="all"
+            >
+                All Cakes
+            </button>
+
+
+            <button
+                class="filter-btn"
+                data-category="birthday"
+            >
+                Birthday
+            </button>
+
+
+            <button
+                class="filter-btn"
+                data-category="anniversary"
+            >
+                Anniversary
+            </button>
+
+
+            <button
+                class="filter-btn"
+                data-category="wedding"
+            >
+                Wedding
+            </button>
+
+
+            <button
+                class="filter-btn"
+                data-category="custom"
+            >
+                Custom
+            </button>
+
+
+        </div>
+
+
+
+        <!-- ================= COUNT ================= -->
+
+        <div class="listing-info">
+
+            <span id="cakeCount">
+                Showing 0 cakes
+            </span>
+
+        </div>
+
+
+
+        <!-- ================= CAKE GRID ================= -->
+
+        <div
+            class="cake-grid"
+            id="cakeGrid"
+        >
+
+            <!-- Cakes will be loaded automatically -->
+
+        </div>
+
+
+
+        <!-- ================= NO RESULTS ================= -->
+
+        <div
+            id="noResults"
+            class="no-results"
+        >
+
+            <div class="no-results-icon">
+                🍰
+            </div>
+
+            <h3>
+                No cakes found
+            </h3>
+
+            <p>
+                Try another cake name or category.
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section
+        id="about"
+        class="about"
+    >
+
+        <p class="about-label">
+            OUR STORY
+        </p>
+
+        <h2>
+            Baked With Love
+        </h2>
+
+        <p>
+            Every cake we make is prepared with
+            carefully selected ingredients and
+            lots of love.
+        </p>
+
+    </section>
+
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section
+        id="contact"
+        class="contact"
+    >
+
+        <h2>
+            Let's Make Your Celebration Sweeter
+        </h2>
+
+        <p>
+            Have a custom cake in mind?
+            Get in touch with us.
+        </p>
+
+        <button onclick="orderCustomCake()">
+            Order on WhatsApp
+        </button>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Sabana Cake Studio.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

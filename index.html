@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Sabana Cake Studio | Cakes & Desserts</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="logo">
+            Sabana Cake Studio
+        </div>
+
+        <nav>
+
+            <a href="#home">Home</a>
+
+            <a href="#cakes">Cakes</a>
+
+            <a href="#about">About</a>
+
+            <a href="#contact">Contact</a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ================= HERO ================= -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-title">
+                Freshly Baked With Love
+            </p>
+
+            <h1>
+                Cakes Made For
+                <br>
+                Your Special Moments
+            </h1>
+
+            <p>
+                Delicious handcrafted cakes made fresh
+                for birthdays, anniversaries, weddings
+                and every celebration.
+            </p>
+
+            <a
+                href="#cakes"
+                class="hero-button"
+            >
+                Explore Our Cakes
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= CAKES ================= -->
+
+    <section
+        id="cakes"
+        class="cakes-section"
+    >
+
+
+        <!-- SECTION HEADING -->
+
+        <div class="section-heading">
+
+            <p>
+                OUR COLLECTION
+            </p>
+
+            <h2>
+                Delicious Cakes
+            </h2>
+
+            <span>
+                Made fresh for every celebration
+            </span>
+
+        </div>
+
+
+
+        <!-- ================= SEARCH + SORT ================= -->
+
+        <div class="listing-tools">
+
+
+            <!-- SEARCH -->
+
+            <div class="search-box">
+
+                <span class="search-icon">
+                    🔍
+                </span>
+
+                <input
+                    type="text"
+                    id="cakeSearch"
+                    placeholder="Search your favourite cake..."
+                    oninput="updateCakeListing()"
+                >
+
+            </div>
+
+
+
+            <!-- SORT -->
+
+            <div class="sort-box">
+
+                <label for="cakeSort">
+                    Sort:
+                </label>
+
+                <select
+                    id="cakeSort"
+                    onchange="updateCakeListing()"
+                >
+
+                    <option value="default">
+                        Default
+                    </option>
+
+                    <option value="low">
+                        Price: Low to High
+                    </option>
+
+                    <option value="high">
+                        Price: High to Low
+                    </option>
+
+                    <option value="az">
+                        Name: A to Z
+                    </option>
+
+                    <option value="za">
+                        Name: Z to A
+                    </option>
+
+                </select>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ================= FILTERS ================= -->
+
+        <div class="cake-filters">
+
+
+            <button
+                class="filter-btn active"
+                data-category="all"
+                onclick="setCategory('all', this)"
+            >
+                All Cakes
+            </button>
+
+
+            <button
+                class="filter-btn"
+                data-category="birthday"
+                onclick="setCategory('birthday', this)"
+            >
+                Birthday
+            </button>
+
+
+            <button
+                class="filter-btn"
+                data-category="anniversary"
+                onclick="setCategory('anniversary', this)"
+            >
+                Anniversary
+            </button>
+
+
+            <button
+                class="filter-btn"
+                data-category="wedding"
+                onclick="setCategory('wedding', this)"
+            >
+                Wedding
+            </button>
+
+
+            <button
+                class="filter-btn"
+                data-category="custom"
+                onclick="setCategory('custom', this)"
+            >
+                Custom
+            </button>
+
+
+        </div>
+
+
+
+        <!-- ================= RESULT INFO ================= -->
+
+        <div class="listing-info">
+
+            <span id="cakeCount">
+                Showing 3 cakes
+            </span>
+
+        </div>
+
+
+
+        <!-- ================= CAKE GRID ================= -->
+
+        <div
+            class="cake-grid"
+            id="cakeGrid"
+        >
+
+
+
+            <!-- ================= CAKE 1 ================= -->
+
+            <div
+                class="cake-card"
+                data-category="birthday"
+                data-name="Chocolate Truffle Cake"
+                data-price="899"
+            >
+
+
+                <div class="cake-image">
+
+                    <img
+                        src="images/chocolate-truffle.jpeg"
+                        alt="Chocolate Truffle Cake"
+                    >
+
+                </div>
+
+
+                <div class="cake-info">
+
+
+                    <span class="cake-style">
+                        Birthday
+                    </span>
+
+
+                    <h3>
+                        Chocolate Truffle Cake
+                    </h3>
+
+
+                    <p>
+                        Rich chocolate sponge layered
+                        with smooth chocolate ganache
+                        and finished with a delicious
+                        chocolate topping.
+                    </p>
+
+
+                    <div class="cake-details">
+
+
+                        <span>
+                            ⚖️ 1 KG
+                        </span>
+
+
+                        <span>
+                            🍫 Chocolate
+                        </span>
+
+
+                        <span>
+                            🎂 Birthday
+                        </span>
+
+
+                    </div>
+
+
+                    <div class="cake-bottom">
+
+
+                        <strong>
+                            ₹899
+                        </strong>
+
+
+                        <button
+                            onclick="orderCake(
+                                'Chocolate Truffle Cake',
+                                '1 KG',
+                                'Chocolate',
+                                '₹899'
+                            )"
+                        >
+                            Order on WhatsApp
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ================= CAKE 2 ================= -->
+
+            <div
+                class="cake-card"
+                data-category="anniversary"
+                data-name="Red Velvet Cake"
+                data-price="999"
+            >
+
+
+                <div class="cake-image">
+
+                    <div class="image-placeholder">
+                        Cake Photo
+                    </div>
+
+                </div>
+
+
+                <div class="cake-info">
+
+
+                    <span class="cake-style">
+                        Anniversary
+                    </span>
+
+
+                    <h3>
+                        Red Velvet Cake
+                    </h3>
+
+
+                    <p>
+                        Soft red velvet sponge with
+                        smooth cream cheese frosting.
+                    </p>
+
+
+                    <div class="cake-details">
+
+
+                        <span>
+                            ⚖️ 1 KG
+                        </span>
+
+
+                        <span>
+                            ❤️ Red Velvet
+                        </span>
+
+
+                        <span>
+                            💍 Anniversary
+                        </span>
+
+
+                    </div>
+
+
+                    <div class="cake-bottom">
+
+
+                        <strong>
+                            ₹999
+                        </strong>
+
+
+                        <button
+                            onclick="orderCake(
+                                'Red Velvet Cake',
+                                '1 KG',
+                                'Red Velvet',
+                                '₹999'
+                            )"
+                        >
+                            Order on WhatsApp
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ================= CAKE 3 ================= -->
+
+            <div
+                class="cake-card"
+                data-category="custom"
+                data-name="Vanilla Berry Cake"
+                data-price="799"
+            >
+
+
+                <div class="cake-image">
+
+                    <div class="image-placeholder">
+                        Cake Photo
+                    </div>
+
+                </div>
+
+
+                <div class="cake-info">
+
+
+                    <span class="cake-style">
+                        Custom
+                    </span>
+
+
+                    <h3>
+                        Vanilla Berry Cake
+                    </h3>
+
+
+                    <p>
+                        Light vanilla sponge with fresh
+                        berries and creamy frosting.
+                    </p>
+
+
+                    <div class="cake-details">
+
+
+                        <span>
+                            ⚖️ 1 KG
+                        </span>
+
+
+                        <span>
+                            🍓 Vanilla Berry
+                        </span>
+
+
+                        <span>
+                            🎉 Celebration
+                        </span>
+
+
+                    </div>
+
+
+                    <div class="cake-bottom">
+
+
+                        <strong>
+                            ₹799
+                        </strong>
+
+
+                        <button
+                            onclick="orderCake(
+                                'Vanilla Berry Cake',
+                                '1 KG',
+                                'Vanilla Berry',
+                                '₹799'
+                            )"
+                        >
+                            Order on WhatsApp
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+
+
+
+        <!-- ================= NO RESULTS ================= -->
+
+        <div
+            id="noResults"
+            class="no-results"
+        >
+
+            <div class="no-results-icon">
+                🍰
+            </div>
+
+            <h3>
+                No cakes found
+            </h3>
+
+            <p>
+                Try another cake name or category.
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section
+        id="about"
+        class="about"
+    >
+
+        <p class="about-label">
+            OUR STORY
+        </p>
+
+
+        <h2>
+            Baked With Love
+        </h2>
+
+
+        <p>
+            Every cake we make is prepared with
+            carefully selected ingredients and
+            lots of love.
+        </p>
+
+    </section>
+
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section
+        id="contact"
+        class="contact"
+    >
+
+        <h2>
+            Let's Make Your Celebration Sweeter
+        </h2>
+
+
+        <p>
+            Have a custom cake in mind?
+            Get in touch with us.
+        </p>
+
+
+        <button
+            onclick="orderCustomCake()"
+        >
+            Order on WhatsApp
+        </button>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Sabana Cake Studio.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
