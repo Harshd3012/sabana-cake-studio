@@ -1,0 +1,859 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fffaf7;
+    color: #3d2925;
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header {
+    width: 100%;
+    min-height: 82px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background: #ffffff;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    box-shadow: 0 2px 15px rgba(80, 40, 25, 0.06);
+}
+
+
+/* LOGO */
+
+.logo {
+    font-size: 27px;
+    font-weight: 700;
+    color: #6f4032;
+    letter-spacing: -0.5px;
+}
+
+
+/* NAV */
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+
+.main-nav a {
+    text-decoration: none;
+    color: #4d3530;
+    font-size: 15px;
+    transition: 0.25s ease;
+}
+
+
+.main-nav a:hover {
+    color: #a95d48;
+}
+
+
+/* =====================================================
+   ADMIN BUTTON
+===================================================== */
+
+.admin-link {
+    display: inline-flex !important;
+
+    align-items: center;
+    justify-content: center;
+
+    visibility: visible !important;
+    opacity: 1 !important;
+
+    color: #ffffff !important;
+
+    background: #6f4032;
+
+    padding: 9px 17px;
+
+    border-radius: 25px;
+
+    font-weight: 600;
+
+    text-decoration: none !important;
+
+    transition: 0.25s ease;
+
+    box-shadow: 0 5px 15px rgba(111, 64, 50, 0.18);
+}
+
+
+.admin-link:hover {
+    background: #4e2c22;
+    color: #ffffff !important;
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 80px 8%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #fff3ec 0%,
+            #fff8f5 55%,
+            #ffffff 100%
+        );
+}
+
+
+.hero-content {
+    max-width: 750px;
+}
+
+
+.small-title {
+    color: #a95d48;
+
+    font-size: 13px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+
+    font-weight: 600;
+}
+
+
+.hero h1 {
+    font-size: clamp(48px, 6vw, 78px);
+
+    line-height: 1.05;
+
+    color: #3b2925;
+
+    margin-bottom: 30px;
+
+    letter-spacing: -2px;
+}
+
+
+.hero-description {
+    max-width: 650px;
+
+    font-size: 18px;
+
+    color: #735d57;
+
+    margin-bottom: 35px;
+}
+
+
+/* HERO BUTTON */
+
+.hero-button {
+    display: inline-block;
+
+    padding: 15px 28px;
+
+    background: #754333;
+
+    color: #ffffff;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    transition: 0.25s ease;
+}
+
+
+.hero-button:hover {
+    background: #542f25;
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   CAKES SECTION
+===================================================== */
+
+.cakes-section {
+    padding: 100px 7%;
+    background: #fffaf7;
+}
+
+
+/* SECTION HEADING */
+
+.section-heading {
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+
+.section-heading p {
+    color: #a95d48;
+
+    font-size: 13px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 10px;
+}
+
+
+.section-heading h2 {
+    font-size: 48px;
+
+    color: #3b2925;
+
+    margin-bottom: 8px;
+}
+
+
+.section-heading span {
+    color: #806d67;
+
+    font-size: 16px;
+}
+
+
+/* =====================================================
+   SEARCH + SORT
+===================================================== */
+
+.listing-tools {
+    max-width: 1100px;
+
+    margin: 0 auto 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+/* SEARCH */
+
+.search-box {
+    flex: 1;
+
+    position: relative;
+}
+
+
+.search-icon {
+    position: absolute;
+
+    left: 17px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    font-size: 16px;
+}
+
+
+.search-box input {
+    width: 100%;
+
+    padding: 14px 18px 14px 48px;
+
+    border: 1px solid #eadbd4;
+
+    border-radius: 30px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    font-size: 15px;
+
+    color: #3d2925;
+}
+
+
+.search-box input:focus {
+    border-color: #a95d48;
+
+    box-shadow:
+        0 0 0 3px rgba(169, 93, 72, 0.08);
+}
+
+
+/* SORT */
+
+.sort-box {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    white-space: nowrap;
+}
+
+
+.sort-box label {
+    color: #6f5a54;
+
+    font-size: 14px;
+}
+
+
+.sort-box select {
+    padding: 12px 15px;
+
+    border: 1px solid #eadbd4;
+
+    border-radius: 25px;
+
+    background: #ffffff;
+
+    color: #4d3530;
+
+    outline: none;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   FILTERS
+===================================================== */
+
+.cake-filters {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin: 25px auto;
+}
+
+
+.filter-btn {
+    border: 1px solid #dfc9c0;
+
+    background: #ffffff;
+
+    color: #6b4b42;
+
+    padding: 10px 20px;
+
+    border-radius: 25px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    transition: 0.25s ease;
+}
+
+
+.filter-btn:hover {
+    border-color: #a95d48;
+
+    color: #a95d48;
+}
+
+
+.filter-btn.active {
+    background: #754333;
+
+    border-color: #754333;
+
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   LISTING INFO
+===================================================== */
+
+.listing-info {
+    max-width: 1100px;
+
+    margin: 0 auto 20px;
+
+    color: #806d67;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   CAKE GRID
+===================================================== */
+
+.cake-grid {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 30px;
+}
+
+
+/* =====================================================
+   CAKE CARD
+===================================================== */
+
+.cake-card {
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 10px 35px rgba(72, 42, 32, 0.08);
+
+    transition: 0.3s ease;
+}
+
+
+.cake-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 18px 45px rgba(72, 42, 32, 0.13);
+}
+
+
+/* =====================================================
+   CAKE IMAGE
+===================================================== */
+
+.cake-image {
+    height: 300px;
+
+    overflow: hidden;
+
+    background: #f3ddd3;
+}
+
+
+.cake-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.5s ease;
+}
+
+
+.cake-card:hover .cake-image img {
+    transform: scale(1.05);
+}
+
+
+/* =====================================================
+   CAKE INFO
+===================================================== */
+
+.cake-info {
+    padding: 25px;
+}
+
+
+.cake-style {
+    display: inline-block;
+
+    color: #a95d48;
+
+    font-size: 12px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+}
+
+
+.cake-info h3 {
+    font-size: 22px;
+
+    color: #3d2925;
+
+    margin-bottom: 10px;
+}
+
+
+.cake-info p {
+    color: #806d67;
+
+    font-size: 14px;
+
+    min-height: 45px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =====================================================
+   CAKE BOTTOM
+===================================================== */
+
+.cake-bottom {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+}
+
+
+.cake-bottom strong {
+    font-size: 21px;
+
+    color: #6f4032;
+}
+
+
+.order-button {
+    border: none;
+
+    background: #754333;
+
+    color: #ffffff;
+
+    padding: 10px 15px;
+
+    border-radius: 25px;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    transition: 0.25s ease;
+}
+
+
+.order-button:hover {
+    background: #542f25;
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   NO RESULTS
+===================================================== */
+
+.no-results {
+    display: none;
+
+    text-align: center;
+
+    padding: 60px 20px;
+}
+
+
+.no-results.show {
+    display: block;
+}
+
+
+.no-results-icon {
+    font-size: 55px;
+
+    margin-bottom: 15px;
+}
+
+
+.no-results h3 {
+    font-size: 25px;
+
+    color: #4d3530;
+
+    margin-bottom: 5px;
+}
+
+
+.no-results p {
+    color: #806d67;
+}
+
+
+/* =====================================================
+   ABOUT
+===================================================== */
+
+.about {
+    padding: 100px 10%;
+
+    text-align: center;
+
+    background: #f8ebe4;
+}
+
+
+.about-label {
+    color: #a95d48;
+
+    letter-spacing: 4px;
+
+    font-size: 13px;
+
+    margin-bottom: 12px;
+}
+
+
+.about h2 {
+    font-size: 48px;
+
+    color: #3b2925;
+
+    margin-bottom: 20px;
+}
+
+
+.about > p:last-child {
+    max-width: 650px;
+
+    margin: auto;
+
+    color: #735d57;
+
+    font-size: 17px;
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.contact {
+    padding: 100px 10%;
+
+    text-align: center;
+
+    background: #ffffff;
+}
+
+
+.contact h2 {
+    font-size: 42px;
+
+    color: #3b2925;
+
+    margin-bottom: 15px;
+}
+
+
+.contact p {
+    color: #806d67;
+
+    margin-bottom: 25px;
+}
+
+
+.whatsapp-button {
+    border: none;
+
+    background: #754333;
+
+    color: #ffffff;
+
+    padding: 14px 28px;
+
+    border-radius: 30px;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+
+.whatsapp-button:hover {
+    background: #542f25;
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    padding: 25px;
+
+    text-align: center;
+
+    background: #3b2925;
+
+    color: #ffffff;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .header {
+        padding: 0 5%;
+    }
+
+
+    .main-nav {
+        gap: 15px;
+    }
+
+
+    .main-nav a {
+        font-size: 13px;
+    }
+
+
+    .cake-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .header {
+        min-height: auto;
+
+        padding: 20px;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    .main-nav {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+
+    .hero {
+        min-height: 600px;
+
+        padding: 60px 25px;
+    }
+
+
+    .hero h1 {
+        font-size: 46px;
+    }
+
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+
+    .cakes-section {
+        padding: 70px 20px;
+    }
+
+
+    .section-heading h2 {
+        font-size: 38px;
+    }
+
+
+    .listing-tools {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .sort-box {
+        justify-content: space-between;
+    }
+
+
+    .cake-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .cake-image {
+        height: 280px;
+    }
+
+
+    .about h2 {
+        font-size: 38px;
+    }
+
+
+    .contact h2 {
+        font-size: 34px;
+    }
+
+}
