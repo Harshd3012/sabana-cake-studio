@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Admin Panel | Sabana Cake Studio</title>
+
+    <link rel="stylesheet" href="admin.css">
+
+
+    <script>
+
+        /*
+        ==============================
+        ADMIN ACCESS PROTECTION
+        ==============================
+        */
+
+        if (
+            sessionStorage.getItem(
+                "sabanaAdminLoggedIn"
+            ) !== "true"
+        ) {
+
+            window.location.replace(
+                "login.html"
+            );
+
+        }
+
+    </script>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="admin-header">
+
+        <div>
+
+            <h1>
+                Sabana Cake Studio
+            </h1>
+
+            <p>
+                Admin Panel
+            </p>
+
+        </div>
+
+
+        <div class="header-actions">
+
+            <a
+                href="index.html"
+                class="view-button"
+            >
+                View Website
+            </a>
+
+
+            <button
+                id="logoutButton"
+                class="logout-button"
+            >
+                Logout
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="admin-container">
+
+
+        <!-- ================= STATS ================= -->
+
+        <section class="stats-grid">
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🎂
+                </div>
+
+                <div>
+
+                    <span>
+                        Total Cakes
+                    </span>
+
+                    <strong id="totalCakes">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    💰
+                </div>
+
+                <div>
+
+                    <span>
+                        Average Price
+                    </span>
+
+                    <strong id="averagePrice">
+                        ₹0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    ✨
+                </div>
+
+                <div>
+
+                    <span>
+                        Categories
+                    </span>
+
+                    <strong id="totalCategories">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ================= ADD CAKE ================= -->
+
+        <section class="admin-card">
+
+            <div class="section-title">
+
+                <div>
+
+                    <span>
+                        CAKE MANAGEMENT
+                    </span>
+
+                    <h2>
+                        Add New Cake 🍰
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <form id="cakeForm">
+
+
+                <div class="form-grid">
+
+
+                    <!-- NAME -->
+
+                    <div class="form-group">
+
+                        <label>
+                            Cake Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="cakeName"
+                            placeholder="Chocolate Truffle Cake"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- CATEGORY -->
+
+                    <div class="form-group">
+
+                        <label>
+                            Category
+                        </label>
+
+                        <select
+                            id="cakeCategory"
+                            required
+                        >
+
+                            <option value="">
+                                Select Category
+                            </option>
+
+                            <option value="birthday">
+                                Birthday
+                            </option>
+
+                            <option value="anniversary">
+                                Anniversary
+                            </option>
+
+                            <option value="wedding">
+                                Wedding
+                            </option>
+
+                            <option value="custom">
+                                Custom
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- PRICE -->
+
+                    <div class="form-group">
+
+                        <label>
+                            Price
+                        </label>
+
+                        <div class="price-input">
+
+                            <span>
+                                ₹
+                            </span>
+
+                            <input
+                                type="number"
+                                id="cakePrice"
+                                placeholder="899"
+                                min="0"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- DESCRIPTION -->
+
+                    <div class="form-group">
+
+                        <label>
+                            Description
+                        </label>
+
+                        <textarea
+                            id="cakeDescription"
+                            placeholder="Describe the cake..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- IMAGE UPLOAD -->
+
+                <div class="form-group full-width">
+
+                    <label>
+                        Cake Image
+                    </label>
+
+                    <div class="upload-box">
+
+                        <input
+                            type="file"
+                            id="cakeImage"
+                            accept="image/*"
+                            required
+                        >
+
+                        <p>
+                            Choose cake image from your computer
+                        </p>
+
+                    </div>
+
+
+                    <div
+                        id="imagePreview"
+                        class="image-preview"
+                    ></div>
+
+                </div>
+
+
+
+                <!-- BUTTON -->
+
+                <div class="form-actions">
+
+                    <button
+                        type="submit"
+                        class="add-button"
+                    >
+                        + Add Cake
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+
+
+        <!-- ================= COLLECTION ================= -->
+
+        <section class="admin-card">
+
+            <div class="collection-header">
+
+                <div>
+
+                    <span>
+                        YOUR PRODUCTS
+                    </span>
+
+                    <h2>
+                        Cake Collection 🎂
+                    </h2>
+
+                </div>
+
+
+                <button
+                    id="clearAllButton"
+                    class="clear-button"
+                >
+                    Clear All
+                </button>
+
+            </div>
+
+
+            <div
+                id="adminCakeList"
+                class="admin-cake-list"
+            >
+
+            </div>
+
+
+            <div
+                id="emptyState"
+                class="empty-state"
+            >
+
+                <div>
+                    🍰
+                </div>
+
+                <h3>
+                    No cakes added yet
+                </h3>
+
+                <p>
+                    Add your first cake using the form above.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <script src="admin.js"></script>
+
+</body>
+
+</html>

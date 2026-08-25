@@ -1,0 +1,814 @@
+/* =========================================
+   SABANA CAKE STUDIO
+   ADMIN PANEL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff8f4,
+            #fffdfb
+        );
+
+    color: #3b2723;
+
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.admin-header {
+
+    background: #3f2925;
+
+    color: white;
+
+    padding: 22px 7%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+.admin-header h1 {
+
+    font-size: 28px;
+
+    margin-bottom: 4px;
+}
+
+
+.admin-header p {
+
+    color: #f3d8cd;
+
+    font-size: 15px;
+}
+
+
+.website-btn {
+
+    color: white;
+
+    text-decoration: none;
+
+    border: 1px solid rgba(255,255,255,.4);
+
+    padding: 11px 20px;
+
+    border-radius: 30px;
+
+    transition: .25s;
+}
+
+
+.website-btn:hover {
+
+    background: white;
+
+    color: #3f2925;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.admin-container {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: 45px auto;
+
+}
+
+
+/* =========================================
+   DASHBOARD
+========================================= */
+
+.dashboard {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+    margin-bottom: 30px;
+}
+
+
+.stat-card {
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    box-shadow:
+        0 10px 35px rgba(65,40,30,.08);
+
+    border: 1px solid #f1dfd8;
+}
+
+
+.stat-icon {
+
+    width: 55px;
+
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background: #fff0e9;
+
+    font-size: 25px;
+}
+
+
+.stat-card strong {
+
+    display: block;
+
+    font-size: 25px;
+
+    margin-bottom: 5px;
+}
+
+
+.stat-card small {
+
+    color: #987e75;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   ADMIN CARD
+========================================= */
+
+.admin-card {
+
+    background: white;
+
+    border-radius: 25px;
+
+    padding: 35px;
+
+    margin-bottom: 30px;
+
+    box-shadow:
+        0 12px 40px rgba(65,40,30,.08);
+
+    border: 1px solid #f0ded7;
+}
+
+
+.section-title p,
+.collection-header p {
+
+    color: #b86c55;
+
+    letter-spacing: 2px;
+
+    font-size: 13px;
+
+    margin-bottom: 5px;
+}
+
+
+.section-title h2,
+.collection-header h2 {
+
+    font-size: 28px;
+
+    color: #35221e;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.form-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 22px;
+
+    margin-top: 30px;
+}
+
+
+.form-group label {
+
+    display: block;
+
+    font-weight: 600;
+
+    font-size: 14px;
+
+    margin-bottom: 8px;
+}
+
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+
+    width: 100%;
+
+    border: 1px solid #e6cfc7;
+
+    background: #fffdfc;
+
+    padding: 14px 15px;
+
+    border-radius: 12px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: .2s;
+}
+
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+
+    border-color: #a85d48;
+
+    box-shadow:
+        0 0 0 3px rgba(168,93,72,.08);
+}
+
+
+.form-group textarea {
+
+    resize: vertical;
+
+    min-height: 120px;
+}
+
+
+/* =========================================
+   PRICE
+========================================= */
+
+.price-input {
+
+    position: relative;
+}
+
+
+.price-input span {
+
+    position: absolute;
+
+    left: 15px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    font-weight: bold;
+
+    z-index: 2;
+}
+
+
+.price-input input {
+
+    padding-left: 35px;
+}
+
+
+/* =========================================
+   IMAGE UPLOAD
+========================================= */
+
+.image-upload-section {
+
+    margin-top: 28px;
+}
+
+
+.upload-label {
+
+    display: block;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    margin-bottom: 9px;
+}
+
+
+.upload-box {
+
+    border: 2px dashed #dfbdb1;
+
+    border-radius: 18px;
+
+    background: #fffaf7;
+
+    min-height: 190px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition: .25s;
+}
+
+
+.upload-box:hover {
+
+    border-color: #a85d48;
+
+    background: #fff5f0;
+}
+
+
+.upload-content {
+
+    width: 100%;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    padding: 35px;
+}
+
+
+.upload-icon {
+
+    font-size: 38px;
+
+    margin-bottom: 8px;
+}
+
+
+.upload-content h3 {
+
+    font-size: 18px;
+
+    margin-bottom: 6px;
+}
+
+
+.upload-content p {
+
+    color: #866f68;
+
+    margin-bottom: 6px;
+}
+
+
+.upload-content span {
+
+    color: #b18478;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   IMAGE PREVIEW
+========================================= */
+
+.image-preview-container {
+
+    display: none;
+
+    position: relative;
+
+    width: 250px;
+
+    margin-top: 20px;
+}
+
+
+.image-preview-container.show {
+
+    display: block;
+}
+
+
+.image-preview-container img {
+
+    width: 250px;
+
+    height: 180px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+
+    border: 1px solid #ead4cc;
+
+    display: block;
+}
+
+
+.remove-image {
+
+    position: absolute;
+
+    top: -10px;
+
+    right: -10px;
+
+    width: 32px;
+
+    height: 32px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #5b3028;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   ADD BUTTON
+========================================= */
+
+.add-cake-btn {
+
+    margin-top: 28px;
+
+    background: #7b4737;
+
+    color: white;
+
+    border: none;
+
+    padding: 15px 28px;
+
+    border-radius: 30px;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .25s;
+}
+
+
+.add-cake-btn:hover {
+
+    background: #593229;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   COLLECTION
+========================================= */
+
+.collection-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+
+.collection-header span {
+
+    display: block;
+
+    color: #8f7971;
+
+    margin-top: 6px;
+}
+
+
+.clear-btn {
+
+    background: transparent;
+
+    color: #a44e3d;
+
+    border: 1px solid #d9aaa0;
+
+    padding: 9px 16px;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+}
+
+
+.clear-btn:hover {
+
+    background: #fff0ec;
+}
+
+
+/* =========================================
+   CAKE LIST
+========================================= */
+
+.admin-cake-list {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+
+.admin-cake {
+
+    display: flex;
+
+    gap: 18px;
+
+    border: 1px solid #eedbd4;
+
+    border-radius: 17px;
+
+    padding: 15px;
+
+    background: #fffdfc;
+}
+
+
+.admin-cake img {
+
+    width: 130px;
+
+    height: 110px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+}
+
+
+.admin-cake-info {
+
+    flex: 1;
+}
+
+
+.admin-cake-info h3 {
+
+    font-size: 18px;
+
+    margin-bottom: 5px;
+}
+
+
+.admin-cake-info .category {
+
+    display: inline-block;
+
+    font-size: 11px;
+
+    padding: 5px 9px;
+
+    border-radius: 20px;
+
+    background: #fff0e9;
+
+    color: #9a5d4b;
+
+    text-transform: uppercase;
+}
+
+
+.admin-cake-info .price {
+
+    font-weight: bold;
+
+    margin-top: 9px;
+}
+
+
+.admin-cake-info p {
+
+    color: #806e68;
+
+    font-size: 13px;
+
+    margin-top: 6px;
+
+    line-height: 1.4;
+}
+
+
+.delete-btn {
+
+    border: none;
+
+    background: #fff0ed;
+
+    color: #a53d2e;
+
+    padding: 7px 11px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    margin-top: 10px;
+}
+
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.empty-state {
+
+    text-align: center;
+
+    padding: 45px 20px;
+
+    color: #8c7770;
+}
+
+
+.empty-state div {
+
+    font-size: 45px;
+
+    margin-bottom: 10px;
+}
+
+
+.empty-state h3 {
+
+    color: #49332d;
+
+    margin-bottom: 6px;
+}
+
+
+/* =========================================
+   TOAST
+========================================= */
+
+.toast {
+
+    position: fixed;
+
+    right: 25px;
+
+    bottom: 25px;
+
+    background: #3f2925;
+
+    color: white;
+
+    padding: 14px 22px;
+
+    border-radius: 10px;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transform: translateY(20px);
+
+    transition: .3s;
+
+    z-index: 9999;
+}
+
+
+.toast.show {
+
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 800px) {
+
+    .dashboard {
+
+        grid-template-columns: 1fr;
+    }
+
+    .form-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .admin-cake-list {
+
+        grid-template-columns: 1fr;
+    }
+
+    .admin-header {
+
+        padding: 20px;
+    }
+
+    .admin-container {
+
+        width: 94%;
+
+        margin-top: 25px;
+    }
+
+    .admin-card {
+
+        padding: 22px;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .admin-header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .admin-cake {
+
+        flex-direction: column;
+    }
+
+    .admin-cake img {
+
+        width: 100%;
+
+        height: 200px;
+    }
+
+}

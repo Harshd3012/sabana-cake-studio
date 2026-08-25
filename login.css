@@ -1,0 +1,257 @@
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+body {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff5ef,
+            #f8e5dc
+        );
+
+}
+
+
+.login-page {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 25px;
+
+}
+
+
+.login-card {
+
+    width: 100%;
+
+    max-width: 430px;
+
+    background: white;
+
+    padding: 45px;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    box-shadow:
+        0 25px 70px
+        rgba(70, 35, 25, 0.15);
+
+}
+
+
+.login-logo {
+
+    width: 75px;
+
+    height: 75px;
+
+    margin: auto;
+
+    margin-bottom: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #fff0e7;
+
+    font-size: 35px;
+
+}
+
+
+.login-card h1 {
+
+    color: #432a24;
+
+    font-size: 27px;
+
+}
+
+
+.login-subtitle {
+
+    color: #9b6c5d;
+
+    margin-top: 7px;
+
+    margin-bottom: 35px;
+
+}
+
+
+.input-group {
+
+    text-align: left;
+
+    margin-bottom: 20px;
+
+}
+
+
+.input-group label {
+
+    display: block;
+
+    color: #4c3028;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    margin-bottom: 8px;
+
+}
+
+
+.input-group input {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: 1px solid #e2cec6;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    font-size: 15px;
+
+}
+
+
+.input-group input:focus {
+
+    border-color: #754331;
+
+}
+
+
+.password-box {
+
+    position: relative;
+
+}
+
+
+.password-box input {
+
+    padding-right: 50px;
+
+}
+
+
+.password-box button {
+
+    position: absolute;
+
+    right: 10px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border: none;
+
+    background: none;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+}
+
+
+.login-button {
+
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #754331;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+}
+
+
+.login-button:hover {
+
+    background: #572f25;
+
+}
+
+
+.login-error {
+
+    min-height: 22px;
+
+    color: #c0392b;
+
+    font-size: 14px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.back-home {
+
+    display: inline-block;
+
+    margin-top: 25px;
+
+    color: #754331;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+}
+
+
+.back-home:hover {
+
+    text-decoration: underline;
+
+}

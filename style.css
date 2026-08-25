@@ -1,0 +1,823 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    color: #432a24;
+
+    background: #fffaf7;
+
+}
+
+
+/* ================= HEADER ================= */
+
+.header {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border-bottom: 1px solid #eee0da;
+
+    backdrop-filter: blur(10px);
+
+}
+
+
+.header-inner {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 20px 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+.logo {
+
+    text-decoration: none;
+
+    color: #754331;
+
+    font-size: 27px;
+
+    font-weight: 700;
+
+}
+
+
+.nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+}
+
+
+.nav a {
+
+    text-decoration: none;
+
+    color: #51352e;
+
+    font-size: 15px;
+
+    transition: 0.2s;
+
+}
+
+
+.nav a:hover {
+
+    color: #b45d43;
+
+}
+
+
+/* ADMIN BUTTON */
+
+.nav .admin-link {
+
+    background: #754331;
+
+    color: #fff;
+
+    padding: 10px 18px;
+
+    border-radius: 30px;
+
+}
+
+
+.nav .admin-link:hover {
+
+    background: #542e24;
+
+    color: #fff;
+
+}
+
+
+
+/* ================= HERO ================= */
+
+.hero {
+
+    min-height: 650px;
+
+    display: flex;
+
+    align-items: center;
+
+    background:
+        linear-gradient(
+            90deg,
+            #fff1e9 0%,
+            #fff8f4 55%,
+            #fffaf7 100%
+        );
+
+}
+
+
+.hero-content {
+
+    max-width: 1200px;
+
+    width: 100%;
+
+    margin: auto;
+
+    padding: 80px 30px;
+
+}
+
+
+.small-title {
+
+    color: #c36a4e;
+
+    letter-spacing: 5px;
+
+    font-size: 13px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.hero h1 {
+
+    font-size: clamp(52px, 6vw, 82px);
+
+    line-height: 1.03;
+
+    color: #432a24;
+
+    margin-bottom: 30px;
+
+}
+
+
+.hero-description {
+
+    max-width: 720px;
+
+    color: #654d46;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    margin-bottom: 35px;
+
+}
+
+
+.hero-button {
+
+    display: inline-block;
+
+    text-decoration: none;
+
+    background: #754331;
+
+    color: white;
+
+    padding: 15px 28px;
+
+    border-radius: 30px;
+
+    transition: 0.2s;
+
+}
+
+
+.hero-button:hover {
+
+    background: #542e24;
+
+    transform: translateY(-2px);
+
+}
+
+
+
+/* ================= CAKES ================= */
+
+.cakes-section {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 100px 30px;
+
+}
+
+
+.section-heading {
+
+    text-align: center;
+
+    margin-bottom: 45px;
+
+}
+
+
+.section-heading p {
+
+    color: #c36a4e;
+
+    letter-spacing: 4px;
+
+    font-size: 13px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.section-heading h2 {
+
+    font-size: 46px;
+
+    color: #432a24;
+
+    margin-bottom: 12px;
+
+}
+
+
+.section-heading span {
+
+    color: #866b63;
+
+}
+
+
+
+/* ================= TOOLS ================= */
+
+.listing-tools {
+
+    display: flex;
+
+    gap: 15px;
+
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+
+}
+
+
+.search-box {
+
+    flex: 1;
+
+    max-width: 600px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    background: white;
+
+    border: 1px solid #ead9d2;
+
+    border-radius: 12px;
+
+    padding: 0 15px;
+
+}
+
+
+.search-box input {
+
+    width: 100%;
+
+    border: none;
+
+    outline: none;
+
+    padding: 14px 5px;
+
+    font-size: 15px;
+
+}
+
+
+.sort-box {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+}
+
+
+.sort-box select {
+
+    padding: 13px;
+
+    border: 1px solid #ead9d2;
+
+    border-radius: 10px;
+
+    background: white;
+
+}
+
+
+
+/* ================= FILTERS ================= */
+
+.cake-filters {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 20px;
+
+}
+
+
+.filter-btn {
+
+    border: 1px solid #dfc7bd;
+
+    background: white;
+
+    color: #65433a;
+
+    padding: 10px 18px;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+}
+
+
+.filter-btn.active,
+.filter-btn:hover {
+
+    background: #754331;
+
+    color: white;
+
+    border-color: #754331;
+
+}
+
+
+
+/* ================= COUNT ================= */
+
+.listing-info {
+
+    margin-bottom: 20px;
+
+    color: #866b63;
+
+    font-size: 14px;
+
+}
+
+
+
+/* ================= GRID ================= */
+
+.cake-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+}
+
+
+.cake-card {
+
+    background: white;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    border: 1px solid #eee0da;
+
+    box-shadow:
+        0 10px 30px
+        rgba(70, 35, 25, 0.06);
+
+    transition: 0.25s;
+
+}
+
+
+.cake-card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 18px 40px
+        rgba(70, 35, 25, 0.12);
+
+}
+
+
+.cake-image {
+
+    width: 100%;
+
+    height: 260px;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+
+.cake-info {
+
+    padding: 22px;
+
+}
+
+
+.cake-category {
+
+    color: #c36a4e;
+
+    font-size: 12px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+}
+
+
+.cake-name {
+
+    font-size: 22px;
+
+    margin: 8px 0;
+
+}
+
+
+.cake-description {
+
+    color: #806961;
+
+    line-height: 1.6;
+
+    min-height: 50px;
+
+}
+
+
+.cake-bottom {
+
+    margin-top: 18px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+
+.cake-price {
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    color: #754331;
+
+}
+
+
+.order-small {
+
+    border: none;
+
+    background: #754331;
+
+    color: white;
+
+    padding: 9px 14px;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+
+}
+
+
+
+/* ================= NO RESULTS ================= */
+
+.no-results {
+
+    display: none;
+
+    text-align: center;
+
+    padding: 70px 20px;
+
+}
+
+
+.no-results > div {
+
+    font-size: 50px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.no-results h3 {
+
+    font-size: 25px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.no-results p {
+
+    color: #866b63;
+
+}
+
+
+
+/* ================= ABOUT ================= */
+
+.about {
+
+    background: #fff0e8;
+
+    padding: 100px 30px;
+
+    text-align: center;
+
+}
+
+
+.about-inner {
+
+    max-width: 700px;
+
+    margin: auto;
+
+}
+
+
+.about-label {
+
+    color: #c36a4e;
+
+    letter-spacing: 4px;
+
+    font-size: 13px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.about h2 {
+
+    font-size: 45px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.about p:last-child {
+
+    color: #725b53;
+
+    line-height: 1.8;
+
+    font-size: 17px;
+
+}
+
+
+
+/* ================= CONTACT ================= */
+
+.contact {
+
+    padding: 100px 30px;
+
+    text-align: center;
+
+}
+
+
+.contact-inner {
+
+    max-width: 700px;
+
+    margin: auto;
+
+}
+
+
+.contact h2 {
+
+    font-size: 42px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.contact p {
+
+    color: #806961;
+
+    margin-bottom: 30px;
+
+}
+
+
+.whatsapp-button {
+
+    border: none;
+
+    background: #754331;
+
+    color: white;
+
+    padding: 15px 25px;
+
+    border-radius: 30px;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+}
+
+
+
+/* ================= FOOTER ================= */
+
+footer {
+
+    padding: 30px;
+
+    text-align: center;
+
+    background: #432a24;
+
+    color: #fff;
+
+    font-size: 14px;
+
+}
+
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 800px) {
+
+    .header-inner {
+
+        flex-direction: column;
+
+        gap: 15px;
+
+    }
+
+
+    .nav {
+
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+    }
+
+
+    .hero {
+
+        min-height: 600px;
+
+    }
+
+
+    .cake-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .listing-tools {
+
+        flex-direction: column;
+
+    }
+
+
+    .search-box {
+
+        max-width: none;
+
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .hero h1 {
+
+        font-size: 48px;
+
+    }
+
+
+    .section-heading h2 {
+
+        font-size: 36px;
+
+    }
+
+
+    .cake-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .nav {
+
+        font-size: 14px;
+
+    }
+
+}
